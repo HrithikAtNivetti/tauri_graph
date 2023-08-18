@@ -14,15 +14,15 @@ const LoadGraph = () => {
   React.useEffect(() => {
     const graph = new Graph();
     graph.addNode("first", {
-      x: 4,
-      y: 9,
+      x: 0,
+      y: 0,
       size: 12,
       label: "My first node",
       color: "#FA4F40",
     });
     graph.addNode("second", {
       x: 10,
-      y: 12,
+      y: 20,
       size: 12,
       label: "My Second node",
       color: "#FA4F40",
@@ -130,7 +130,12 @@ const GraphEvents = () => {
 export const DisplayGraph = () => {
   return (
     <>
-      <SigmaContainer style={{ height: "500px", width: "500px" }}>
+      <SigmaContainer
+        style={{
+          width: "95rem",
+          height: "30rem",
+        }}
+      >
         <LoadGraph />
         <GraphEvents />
       </SigmaContainer>
