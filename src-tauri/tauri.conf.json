@@ -11,13 +11,6 @@
     "version": "0.0.0"
   },
   "tauri": {
-    "allowlist": {
-      "all": false,
-      "shell": {
-        "all": false,
-        "open": true
-      }
-    },
     "bundle": {
       "active": true,
       "targets": "all",
@@ -28,7 +21,18 @@
         "icons/128x128@2x.png",
         "icons/icon.icns",
         "icons/icon.ico"
+      ],
+      "externalBin": [
+        "python/python"
       ]
+    },
+    "allowlist": {
+      "shell": {
+        "sidecar": true,
+        "scope": [
+          { "name": "python/python", "sidecar": true }
+        ]
+      }
     },
     "security": {
       "csp": null
